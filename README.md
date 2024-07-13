@@ -13,7 +13,7 @@
 - Spring data jpa and hibernate: Simplify the mapping of database tables to Java objects effortlessly.
 - Spring cache: Easily configured to automatically handle caching with annotations or through manual processes.
 - Redisson to integrate redis: Flexible configuration options for Redis cache using sentinelServersConfig or singleServerConfig.
-- Mysql 8.0.
+- Postgres 16.1
 - Redis latest version (standalone).
 
 ### Run project
