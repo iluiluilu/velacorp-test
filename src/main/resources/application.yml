@@ -1,0 +1,40 @@
+spring:
+  application:
+    name: velaecommerce
+  redis:
+    redisson:
+      config: |
+        singleServerConfig:
+          address: redis://springcache:6379
+          password:
+          database: 0
+  datasource:
+    url: jdbc:postgresql://springdb:5432/velaecommerce
+    driverClassName: org.postgresql.Driver
+    username: postgres
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: update
+      show-sql: true
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+  properties:
+    hibernate:
+      jdbc:
+        batch_size: 100
+        batch_versioned_data: true
+      order_inserts: true
+      order_updates: true
+server:
+  port: 6075
+  servlet:
+    context-path: /ecommerce-service/
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql:
+              BasicBinder: TRACE
